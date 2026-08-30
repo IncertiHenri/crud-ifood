@@ -4,14 +4,14 @@ include("../infra/conexao.php");
 
 $nome = $_POST["nome"];
 $telefone = $_POST["fone"];
-$email = $_POST["email"];
 $endereco = $_POST["end"];
+$categoria = $_POST["cat"];
 
-$sql = "INSERT INTO clientes (nome,telefone,email,endereco) VALUES(?,?,?,?)";
+$sql = "INSERT INTO restaurantes (nome,categoria,telefone,endereco) VALUES(?,?,?,?)";
 
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("ssss",$nome,$telefone,$email,$endereco);
+$stmt->bind_param("ssss",$nome,$categoria,$telefone,$endereco);
 
 $stmt->execute();
 

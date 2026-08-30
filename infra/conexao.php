@@ -2,10 +2,11 @@
 
 $host = 'localhost';
 $user = 'root';
-$senha = 'root';
+$senha = '';
 $database = 'crud_ifood';
+$port = 3308;
 
-$conn = new mysqli($host, $user, $senha, $database);
+$conn = new mysqli($host, $user, $senha, $database, $port);
 
 $conn -> set_charset("utf8mb4");
 
